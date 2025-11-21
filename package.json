@@ -1,0 +1,24 @@
+{
+  "name": "lista-compras-microservices",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start:user": "node services/user-service/index.js",
+    "start:item": "node services/item-service/index.js",
+    "start:list": "node services/list-service/index.js",
+    "start:gateway": "node api-gateway/index.js",
+    "start:all": "npm-run-all -p start:user start:item start:list start:gateway"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.9",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
